@@ -21,7 +21,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
         if ($results && password_verify($password, $results['password'])) {
             $_SESSION['user_id'] = $results['id'];
-            header("Location: /dashboard.php");
+            header("Location: dashboard.php");
             exit; // Make sure to exit after redirection
         } else {
             $message = 'Sorry, those credentials do not match';
@@ -45,5 +45,6 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
       <input name="password" type="password" placeholder="Enter your Password">
       <input type="submit" value="Submit">
     </form>
+    <script src="assets/js/script.js" charset="utf-8"></script>
   </body>
 </html>

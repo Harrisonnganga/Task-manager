@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $taskId = $_POST['id'];
   $taskName = $_POST['name'];
@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if ($stmt->execute()) {
    echo 'Task edited successfully';
+   header("location: task_manager.php")
   } else {
    echo 'There was an error editing the task';
   }
@@ -21,4 +22,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     http_response_code(400);
     echo 'Bad Request';
 }
-?> -->
+?>

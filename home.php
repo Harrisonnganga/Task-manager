@@ -146,27 +146,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>ToDo</h2>
     <div class="task-form">
         <h5>Add New Task</h5>
-        <form id="task-form">
+        <form id="task-form" action="task_manager.php" method="post">
             <div class="form-group">
                 <label for="task-name">Task Name:</label>
-                <input type="text" id="task-name" required>
+                <input type="text" name="task_name" id="task-name" required>
             </div>
             <div class="form-group">
                 <label for="task-description">Description:</label>
-                <textarea id="task-description" required></textarea>
+                <textarea id="task-description" name="description" required></textarea>
             </div>
-            <button type="submit">Add Task</button>
+            <button type="button" id="add-task-button">Add Task</button>
         </form>
     </div>
     <div class="task-list">
         <h4>Task List</h4>
         <ul id="task-list">
-            <!-- Tasks will be dynamically added here -->
         </ul>
     </div>
 </div>
 
 
-<script src="../assets/js/main.js" charset="utf-8"></script>
 </body>
 </html>

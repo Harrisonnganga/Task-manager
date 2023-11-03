@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function deleteTask(taskItem) {
-        // Remove the task item from the list
         taskItem.remove();
     }
 
@@ -43,3 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
         // Implement your edit logic here
     }
 });
+
+const addTaskButton = document.getElementById('add-task-button');
+
+addTaskButton.addEventListener('click', function () {
+  const taskName = document.getElementById('task-name').value;
+     const taskDescription = document.getElementById('task-description').value;
+
+     if (taskName && taskDescription) {
+         addTask(taskName, taskDescription);
+         // Clear the input fields if needed
+         document.getElementById('task-name').value = '';
+         document.getElementById('task-description').value = '';
+     }
+ });
